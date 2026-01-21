@@ -36,7 +36,7 @@ def set_status(uid, status):
     conn.commit()
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    kb = ReplyKeyboardMarkup([[\"📂 Menu\", \"💰 Pay\"], [\"📞 Contact Owner\"]], resize_keyboard=True)
+    kb = ReplyKeyboardMarkup([["📂 Menu", "💰 Pay"], ["📞 Contact Owner"]], resize_keyboard=True)
     await update.message.reply_text(\"👋 Welcome\\nMenu open karne ke liye 📂 Menu dabayein\", reply_markup=kb)
 
 async def pay(update: Update, context: ContextTypes.DEFAULT_TYPE):
